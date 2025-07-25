@@ -1,12 +1,15 @@
-import Flutter
 import UIKit
-import XCTest
+import Flutter
+import GoogleMaps
 
-class RunnerTests: XCTestCase {
-
-  func testExample() {
-    // If you add code to the Runner application, consider adding tests here.
-    // See https://developer.apple.com/documentation/xctest for more information about using XCTest.
+@UIApplicationMain
+@objc class AppDelegate: FlutterAppDelegate {
+  override func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+    GMSServices.provideAPIKey("AIzaSyDS_8GOEvOCJ4pQFGPJAN41lP5Zi9n4a5Y")
+    GeneratedPluginRegistrant.register(with: self)
+    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
-
 }
